@@ -1,0 +1,26 @@
+.social-links {
+  display: flex;
+  align-items: center;
+  svg {
+    transition: fill 0.3s;
+  }
+}
+
+.social-links--white svg {
+  fill: $white;
+  &:hover {
+    fill: $medium-gray;
+  }
+}
+
+.social-links--dark svg {
+  fill: lighten($dark-gray, 10%);
+  &:hover {
+    fill: $dark-gray;
+  }
+}
+
+.social-links__item {
+  margin-right: 1rem;
+  font-size: 0;  // remove extra space from bottom
+}

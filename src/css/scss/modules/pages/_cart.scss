@@ -1,0 +1,237 @@
+////////////////////
+// Default Styles //
+////////////////////
+.template-cart {
+	h2, h3 {
+		color: #1e418f;
+	}
+}
+
+.mobile-update-cart {
+  display: none !important;
+}
+table.cart-table {
+  width: 100%;
+  margin-top: 12px;
+}
+table.cart-table td,
+table.cart-table th {
+  padding: 4px 8px;
+  vertical-align: middle;
+  font-size: 16px;
+}
+table.cart-table th {
+  font-size: 17px;
+  padding: 8px;
+}
+table.cart-table .image {
+  width: 15%;
+}
+table.cart-table .item-name {
+  width: 40%;
+}
+table.cart-table td.qty,
+table.cart-table th.qty {
+  width: 15%;
+  text-align: center;
+}
+table.cart-table .eff-price {
+  width: 15%;
+  text-align: right;
+}
+table.cart-table .total {
+  width: 15%;
+  text-align: right;
+}
+.qty input.update-qty[type="text"] {
+  margin: 0 4px;
+  vertical-align: middle;
+}
+table.cart-table td.qty label {
+  display: none;
+  vertical-align: middle;
+}
+table.cart-table thead {
+  background: #f5f9fa;
+  border: 1px solid #e9e9e9;
+  font-size: 15px;
+}
+.continue-shopping {
+  float: left;
+  display: inline-block;
+  font-size: 18px;
+  padding: 8px 0 0;
+}
+h2.cart-products-title {
+  margin-bottom: 0;
+  // font-family: 'proxima-nova', sans-serif;
+  color: #1d418f;
+  font-weight: bold;
+  font-size: 24px;
+
+}
+input[type="text"].update-qty {
+  width: 40px;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 0;
+  outline: none;
+  text-align: left;
+  border: 1px solid #cccccc;
+}
+.product-listing__cart {
+  text-align: center;
+}
+
+.cart-pricing-order {
+  float: right;
+  width: 340px;
+  max-width: 100%;
+  font-size: 18px;
+}
+.cart-pricing-order table {
+  margin: 40px 0 25px;
+  width: 100%;
+
+}
+.t-label {
+  width: 60%;
+  vertical-align: middle;
+}
+.t-price {
+  text-align: right;
+  font-weight: bold;
+  width: 40%;
+  vertical-align: top;
+}
+.t-price span.money {
+  font-weight: bold;
+}
+.cart-pricing-order:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#your-shopping-cart .breadcrumb {
+  display: none;
+}
+.cart-list {
+  overflow: hidden;
+}
+
+.cart-list .item_image {
+  text-align: center;
+}
+
+.cart-list .item_remove {
+  margin: 0 0 0 10px;
+}
+.cart-list .item_remove a {
+  font-size: 20px;
+  color: #fe2a2a;
+}
+
+.cart-list .item_price {
+  padding: 10px 0 0;
+}
+
+.cart-list .item_price label {
+  padding: 0;
+  line-height: 37px;
+}
+.cart-list .item_price .input-small {
+  width: 40px;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 0;
+  outline: none;
+  text-align: left;
+  border: 1px solid #cccccc;
+}
+
+.cart-list .item_price .total {
+  text-align: right;
+}
+.cart-list .item_price .total h3 {
+  border-bottom: 1px solid #d6d6d6;
+  font-size: 20px;
+}
+
+.cart_subtotal h3 .money {
+  float: right;
+}
+
+.cart_buttons {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.cart_instructions textarea {
+  width: 100%;
+}
+
+/*Payment Methods*/
+
+#payment-methods {
+  text-align: center;
+}
+#payment-methods ul {
+  margin: 0;
+  padding: 10px 0;
+}
+#payment-methods ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 4px 4px 0;
+}
+
+////////////////////
+// Breakpoints    //
+////////////////////
+
+@media screen and (max-width: 500px) {
+	table.cart-table td,
+	table.cart-table th {
+	  display: block;
+	  float: left;
+	  font-size: 13px;
+	  padding: 4px 8px;
+	  vertical-align: middle;
+	  width: 30%;
+	  box-sizing: border-box;
+	}
+	table.cart-table .image {
+	  width: 10%;
+	  display: none !important;
+	}
+	table.cart-table .item-name {
+	  width: 30%;
+	  font-size: 13px;
+	}
+	table.cart-table td.qty,
+	table.cart-table th.qty {
+	  width: 20%;
+	  text-align: center;
+	}
+	.bottom-thead {
+	  display: none !important;
+	}
+	table.cart-table .eff-price {
+	  width: 25%;
+	  text-align: right;
+	}
+	table.cart-table .total {
+	  width: 25%;
+	  text-align: right;
+	}
+	input.update-qty[type="text"] {
+	  width: 30px;
+	}
+	.mobile-update-cart {
+	  display: block !important;
+	  margin: 12px auto 0 !important;
+	}
+}

@@ -1,0 +1,33 @@
+////////////////////
+// Default Styles //
+////////////////////
+
+.alert,
+.errors {
+	margin: 15px 0;
+	border-radius: 0;
+	> ol,
+	> p,
+	> ul {
+		list-style-type: none;
+		margin: 0;
+	}
+	> p + p,
+	> ul + ul {
+		margin: 10px 0 0;
+	}
+}
+
+.errors{
+	color: #b94a48;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    padding: 15px;
+    border: 1px solid transparent;
+}
+
+
+
+////////////////////
+// Breakpoints    //
+////////////////////

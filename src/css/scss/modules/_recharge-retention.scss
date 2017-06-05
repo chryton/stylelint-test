@@ -1,0 +1,233 @@
+.remodal-overlay {
+	background: rgba(0, 0, 0, 0.6);
+}
+#rc_subscriptions__items__address {
+	address {
+		margin-bottom: 12px;
+	}
+}
+#rc_subscriptions__items__cancel {
+	display: flex;
+	.button-style {
+		margin-top: 12px;
+		border: 1px solid color('brand', 'quaternary');
+		color: color('brand', 'quaternary');
+		background-color: #fff;
+		box-shadow: 0px;
+		border-radius: 8px;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 12px 0px;
+		margin-right: 12px;
+		padding: 12px 44px;
+		transition: all .1s ease-in-out;
+		&:hover {
+			background-color: color('brand', 'quaternary');
+			color: #fff;
+			text-decoration: none;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+.recharge-modal {
+	max-width: 400px;
+	margin-bottom: 0px;
+	padding: 48px;
+	position: relative;
+	&__x {
+		position: absolute;
+		top: 12px;
+		right: 12px;
+		cursor: pointer;
+		transition: fill .1s ease-in-out;
+		&:hover {
+			fill: #000;
+		}
+		svg {
+			padding: 8px;
+		}
+	}
+	&__initial {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__heading {
+		font-family: $font--poppins;
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: 1.2rem !important; //override defaults
+		color: #000;
+	}
+	&__subheading {
+		color: color('gray', 'base');
+		font-size: 14px;
+		margin-bottom: 24px;
+	}
+	&__form {
+		margin-top: 36px;
+		.quantity-selector {
+			visibility: hidden;
+			margin-left: auto;
+			.quantity-text {
+				margin-right: 12px;
+			}
+		}
+		input[type="number"] {
+			border: 1px solid rgba(0,0,0,0.1);
+			width: 50px;
+			height: 25px;
+			border-radius: 3px;
+			padding: 0px;
+			&::-webkit-inner-spin-button { 
+				opacity: 0;
+			}    
+		}
+		&-error {
+			font-size: 12px;
+		    color: red;
+		    margin: 0;
+		    padding-bottom: 12px;
+		}
+		&-option  {
+			visibility: hidden;
+			width: 0px;
+			&:checked + .recharge-checkbox {
+				background-color: color('brand', 'quaternary');
+			}
+			&:checked ~ .quantity-selector {
+				visibility: visible !important;
+				
+			}
+		}
+		textarea {
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			resize: none;
+		}
+		label {
+			display: flex;
+			align-items: center;
+			text-align: left;
+			cursor: pointer;
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			border-radius: 3px;
+			padding: 10px;
+			margin-bottom: 12px;
+			font-size: 14px;
+			color: color('gray', 'dark');
+			font-weight: 500;
+			transition: border .2s ease-in-out;
+			&:hover {
+				border: 1px solid #b3b3b3;
+			}
+			span.recharge-checkbox {
+				width: 25px;
+				height: 25px;
+				border-radius: 2px;
+				border: 1px solid rgba(0, 0, 0, 0.1);
+				margin-right: 12px;
+				background-color: transparent;
+				transition: background-color .1s ease-in-out;
+				display: flex;
+			    flex-direction: column;
+			    justify-content: center;
+				.check {
+					margin: auto;
+				    width: 15px;
+				    height: 18.5px;
+				}
+				
+			}
+		}
+		&-submit {
+			width: 100%;
+			border: 1px solid color('brand', 'quaternary');
+			color: color('brand', 'quaternary');
+			background-color: #fff;
+			box-shadow: 0px;
+			border-radius: 8px;
+			font-weight: bold;
+			text-transform: uppercase;
+			padding: 12px 0px;
+			margin: 12px 0px;
+			transition: all .1s ease-in-out;
+			&:hover {
+				background-color: color('brand', 'quaternary');
+				color: #fff;
+			}
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+	&__close {
+		color: color('gray', 'dark');
+		cursor: pointer;
+		font-size: 13px;
+		margin-top: 12px;
+		font-weight: 400;
+	}
+	&__success, &__confirmation {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 28px 0px;
+		.recharge-modal__content {
+			margin: 36px 0px 12px 0px;
+		}
+		.recharge-modal__heading {
+			margin-bottom: 4px;
+		}
+		&-checkmark, &-frown {
+			position: relative;
+			background-color: color('brand', 'quaternary');
+			width: 90px;
+		    height: 90px;
+		    border-radius: 50%;
+		    svg {
+		    	margin: 32px 28px 0px 28px;
+		    }
+		}
+		.success-close {
+			width: 65%;
+			margin: 12px 0px 16px 0px;
+			
+		}
+	}
+	.hidden {
+		display: none;
+	}
+}
+@media screen and (max-width: 990px) {
+	#rc_subscriptions__items__cancel {
+		flex-direction: column;
+		.button-style {
+			margin-bottom: 12px;
+		}
+	}
+	.recharge .layout__content, .recharge .rc_layout__content {
+		/*Fixing ReCharge's terrible mobile layout 🙃*/
+		width: 100% !important;
+		/*No this selector is not mine */
+		.table-responsive > .table > thead > tr > th, .table-responsive > .table > tbody > tr > th, .table-responsive > .table > tfoot > tr > th, .table-responsive > .table > thead > tr > td, .table-responsive > .table > tbody > tr > td, .table-responsive > .table > tfoot > tr > td {
+			white-space: inherit !important;
+		}
+	}
+	.recharge-modal {
+		overflow: scroll;
+		padding: 32px;
+		&__heading {
+			margin-top: 12px;
+		}
+		&__x {
+			position: absolute;
+			top: 8px;
+			right: 8px;
+		}
+	}
+}

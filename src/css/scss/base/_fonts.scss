@@ -1,0 +1,139 @@
+///////////////////
+// FONTS         //
+///////////////////
+// @font-face {
+//   font-family: 'proxima-nova';
+//   src: url("proximanova-reg-webfont.eot");
+//   src: url("proximanova-reg-webfont.eot?#iefix") format('embedded-opentype'), url("proximanova-reg-webfont.woff") format('woff'), url("proximanova-reg-webfont.ttf") format('truetype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'proxima-nova';
+//   src: url("proximanova-regitalic-webfont.eot");
+//   src: url("proximanova-regitalic-webfont.eot?#iefix") format('embedded-opentype'), url("proximanova-regitalic-webfont.woff") format('woff'), url("proximanova-regitalic-webfont.ttf") format('truetype');
+//   font-weight: normal;
+//   font-style: italic;
+// }
+
+// @font-face {
+//   font-family: 'proxima-nova';
+//   src: url("proximanova-semibold-webfont.eot");
+//   src: url("proximanova-semibold-webfont.eot?#iefix") format('embedded-opentype'), url("proximanova-semibold-webfont.woff") format('woff'), url("proximanova-semibold-webfont.ttf") format('truetype');
+//   font-weight: 600;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'proxima-nova';
+//   src: url("proximanova-bold-webfont.eot");
+//   src: url("proximanova-bold-webfont.eot?#iefix") format('embedded-opentype'), url("proximanova-bold-webfont.woff") format('woff'), url("proximanova-bold-webfont.ttf") format('truetype');
+//   font-weight: 700;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'proxima-nova';
+//   src: url("proximanova-extrabold-webfont.eot");
+//   src: url("proximanova-extrabold-webfont.eot?#iefix") format('embedded-opentype'), url("proximanova-extrabold-webfont.woff") format('woff'), url("proximanova-extrabold-webfont.ttf") format('truetype');
+//   font-weight: 800;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'museo';
+//   src: url("museo300-regular-webfont.eot");
+//   src: url("museo300-regular-webfont.eot?#iefix") format('embedded-opentype'), url("museo300-regular-webfont.woff") format('woff'), url("museo300-regular-webfont.ttf") format('truetype');
+//   font-weight: 300;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'museo';
+//   src: url("museo500-regular-webfont.eot");
+//   src: url("museo500-regular-webfont.eot?#iefix") format('embedded-opentype'), url("museo500-regular-webfont.woff") format('woff'), url("museo500-regular-webfont.ttf") format('truetype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'museo';
+//   src: url("museo700-regular-webfont.eot");
+//   src: url("museo700-regular-webfont.eot?#iefix") format('embedded-opentype'), url("museo700-regular-webfont.woff") format('woff'), url("museo700-regular-webfont.ttf") format('truetype');
+//   font-weight: 700;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'museo';
+//   src: url("museo900-regular-webfont.eot");
+//   src: url("museo900-regular-webfont.eot?#iefix") format('embedded-opentype'), url("museo900-regular-webfont.woff") format('woff'), url("museo900-regular-webfont.ttf") format('truetype');
+//   font-weight: 900;
+//   font-style: normal;
+
+// }
+// @font-face {
+//   font-family: 'Genericons';
+//   src: url("genericons-regular-webfont.eot");
+//   src: url("genericons-regular-webfont.eot?#iefix") format('embedded-opentype'), url("genericons-regular-webfont.woff") format('woff'), url("genericons-regular-webfont.ttf") format('truetype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "slick";
+//   src: url("slick.eot");
+//   src: url("slick.eot?#iefix") format("embedded-opentype"), url("slick.woff") format("woff"), url("slick.ttf") format("truetype"), url("slick.svg#slick") format("svg");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'FontAwesome';
+//   src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/fonts/fontawesome-webfont.eot");
+//   src:  url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3") format('embedded-opentype'),
+//         url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/fonts/fontawesome-webfont.woff") format('woff'),
+//         url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/fonts/fontawesome-webfont.ttf") format('truetype'),
+//         url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/fonts/fontawesome-webfont.svg") format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+
+///////////////////
+// TEMPLATES     //
+///////////////////
+
+// With path() function
+// @font-face {
+// 	font-family: '';
+// 	src: url(path('.eot', font, ''));
+// 	src: url(path('.eot?#iefix', font, '')),
+// 		 url(path('.woff', font, '')),
+// 		 url(path('.ttf', font, '')),
+// 		 url(path('.svg', font, ''));
+// }
+
+// Without it
+// @font-face {
+// 	font-family: '';
+// 	src: url('../fonts//.eot');
+// 	src: url('../fonts//.eot?#iefix') format('embedded-opentype'),
+// 	     url('../fonts//.woff') format('woff'),
+// 	     url('../fonts//.ttf') format('truetype'),
+// 	     url('../fonts//.svg') format('svg');
+// }
+
+// $helvetica-neue-bold: 'HelveticaNeueLTStd-Bd', "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+// $helvetica-neue-medium: 'HelveticaNeueLTStd-Md', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+// $helvetica-neue-light: 'HelveticaNeueLTStd-Lt', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+// $proxima-nova--bold: 'proxima-bold', sans-serif;
+// $futura--medium: 'futura-medium', sans-serif;
+// $motor-oil: 'motor-oil', sans-serif;
+$font--ss_fallback: Helvetica, Arial, sans-serif;
+
+$font--poppins: 'Poppins', $font--ss_fallback; // Sofia Replacement
+$font--roboto: 'Roboto', $font--ss_fallback;
+$font--open_sans: $font--roboto; // 'Open Sans', $font--ss_fallback;
+// $proxima: 'proxima-nova', 'Open Sans', Helvetica, Arial, sans-serif;

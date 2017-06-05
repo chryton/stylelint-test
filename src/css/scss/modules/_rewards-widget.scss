@@ -1,0 +1,197 @@
+.rewards-widget {
+	width: 100%;
+	background: #f0f5f5;
+	padding: 0 10px 16px 10px;
+
+	&__wrap {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.info {
+		width: 100%;
+		padding: 28px 0;
+		//height: 150px;
+
+		&__wrap {
+			width: 100%;
+			height:100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			color: color('brand', 'dark');
+		}
+
+		&__title {
+			margin-bottom: 6px;
+			font-size: 10px;
+			font-weight: 700;
+			text-transform: uppercase;
+			@include psd-letter-spacing(150);
+		}
+
+		&__points {
+			margin-bottom: 6px;
+			font-family: $font--poppins;
+			font-weight: 700;
+			font-size: 20px;
+
+			span {
+				display: inline-block;
+				position: relative;
+
+				&:after {
+					content: "";
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					border-top: 1px solid color('brand', 'dark');
+				}
+			}
+		}
+
+		&__text {
+			font-size: 14px;
+
+			.btn {
+				display: block;
+				height: auto;
+				margin-top: 4px;
+				padding: 1em 1.25em;
+				color: color('brand', 'dark');
+				@include psd-letter-spacing(160);
+				background: transparent;
+				border: 1px solid color('brand', 'dark');
+				border-radius: 3px;
+				cursor: pointer;
+
+				&:hover {
+					color: #fff;
+					background: color('brand', 'primary');
+					border-color: transparent;
+				}
+
+				&.disabled {
+					color: color('gray', 'sold_out');
+					border-color: color('gray', 'sold_out');
+					pointer-events: none;
+				}
+			}
+		}
+	}
+
+	.products {
+		display: none;
+		width: 100%;
+
+		&__wrap {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: stretch;
+			text-align: center;
+		}
+
+		&__product {
+			width: calc(50% - 10px);
+			text-align: center;
+			background: #fff;
+			margin: 5px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: stretch;
+		}
+
+		&__img {
+			height: 150px;
+			width: 100%;
+			padding: 1rem;
+
+			img {
+				height: 100%;
+				width: auto;
+			}
+		}
+
+		&__title {
+			padding: 10px;
+			margin: auto 0 0 0;
+		}
+
+		&__add {
+			width: 100%;
+			padding: 5px;
+		}
+
+		&__btn {
+			@extend %btn-pill-ghost;
+			width: 100%;
+			align-self: center;
+			font-size: 12px;
+			@include psd-letter-spacing(160);
+			color: color('brand', 'dark');
+			text-transform: uppercase;
+			border-width: 1px;
+			border-radius: 10px;
+
+			&:hover,
+			&:focus{
+				color: color('brand', 'seafoam');
+				border-color: color('brand', 'seafoam');
+				border-width: 1px;
+
+			}
+
+			// created by Loyalty Lions API
+			&.disabled {
+				color: color('gray', 'sold_out');
+				border-color: color('gray', 'sold_out');
+				pointer-events: none;
+			}
+
+			&.redeemed {
+				color: #fff;
+				background: color('brand', 'dark');
+				pointer-events: none;
+			}
+		}
+	}
+}
+
+
+////////////////////
+// Breakpoints    //
+////////////////////
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 1099px) {
+
+}
+
+@media screen and (max-width: 960px) {
+
+}
+
+@media screen and (max-width: 800px) {
+
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 400px){
+
+}

@@ -1,0 +1,135 @@
+////////////////////
+// Default Styles //
+////////////////////
+
+body,
+html {
+	height: 100%;
+	background: #fff;
+}
+html {
+	font-size: 100%;
+}
+
+// bootstrap overrides
+body {
+  font-family: $font--open_sans;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: $font--open_sans;
+}
+
+.container {
+	padding: 0;
+}
+
+.mobile {
+	display: none;
+}
+
+/* hiding placeholder text on focus in webkit, thanks to http://www.kolodvor.net/2012/03/23/webkit-placeholder-attribute-behavior */
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+/* clearfix - nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix {
+	zoom: 1;
+}
+.clearfix:after,
+.clearfix:before {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+
+/* utility classes: hidden, float left, float right, etc. */
+.hidden,
+.visuallyhidden {
+  display: none;
+}
+
+.left {
+  float: left;
+  text-align: left;
+}
+.right {
+  float: right;
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+  position: absolute;
+  left: -9000px;
+}
+.clear {
+  width: 100%;
+  height: 0;
+  clear: both;
+}
+.hidden {
+  display: none;
+}
+
+.yellow {
+  color: #f3f162;
+}
+.blue {
+  color: #1e418f;
+}
+.center {
+  text-align: center;
+}
+dd, hr, ol, p, pre, ul {
+	margin-bottom: 18px;
+}
+dd, ol, p, pre, ul {
+	font-size: 19px;
+	line-height: 26px;
+	margin-bottom: 36px;
+}
+
+img {
+  border: 0;
+  height: auto;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	cursor: auto;
+}
+
+/* hover transitions */
+.trs_hover {
+  transition: 0.5s ease-in-out;
+}
+.trs_hover:hover {
+  transition: 0.2s ease-in-out;
+}
+
+////////////////////
+// Breakpoints    //
+////////////////////
+
+@media (max-width: 767px) { // override the bootstrap container override hooray
+	.container {
+		padding: 0 15px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.mobile {
+		display: block;
+	}
+}

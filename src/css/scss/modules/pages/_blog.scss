@@ -1,0 +1,140 @@
+.template-blog {
+	.container{
+		width: 100% !important;
+	}
+	#main{
+		margin-top: 0 !important;
+	}
+	.blog_list{
+		&--header{
+			min-height: 220px;
+			width: 100%;
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			align-items: center;
+			background-color: color('brand', 'dark');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			position: relative;
+			padding: 30px 0;
+			margin-bottom: 70px;
+		}
+		&--heading{
+			position: relative;
+			z-index: 2;
+			color: #fff;
+			text-align: center;
+			padding: 0 48px;
+			text-shadow: 0 0 5px rgba(0,0,0, 0.15);
+			font-size: 40px !important;
+			font-weight: 800;
+			font-family: $font--poppins;
+			margin: 0;	
+		}
+		&--articles{
+			max-width: 930px;
+			width: 100%;
+			padding: 0 40px;
+			margin: 0 auto;
+		}
+		&--article{
+			display: flex;
+			margin-bottom: 50px;
+			&:hover{
+				.article--image{
+					transform: scale3d(1.05,1.05,1);
+				}
+			}
+		}
+	}
+	.article{
+		&--content{
+			margin-left: 32px;
+			width: calc(55% - 32px);
+		}
+		&--image_wrapper{
+			width: 45%;
+			height: 280px;
+			overflow: hidden;
+		}
+		&--image{
+			width: 100%;
+			height: auto;
+			transition: transform 0.34s ease;
+		}
+		&--title{
+			display: block;
+			font-family: $font--poppins;
+			font-size: 30px;
+			line-height: 1.17;
+			font-weight: 800;
+			color: color('gray', 'dark');
+			margin-bottom: 20px;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+		&--excerpt{
+			font-size: 18px;
+			line-height: 1.56;
+			margin-bottom: 0;
+		}
+		&--read_more{
+			color: color('brand', 'primary') !important;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+	}
+}
+
+@media screen and (max-width: 720px){
+	.template-blog{
+		.blog_list{
+			&--articles{
+				padding: 40px 24px 0;
+				max-width: 500px;
+			}
+			&--article{
+				display: flex;
+				flex-direction: column;
+			}
+			&--header{
+				margin-bottom: 30px;
+			}
+		}
+		.article{
+			&--image_wrapper{
+				width: 100%;
+				max-width: 500px;
+				margin: 0 auto 24px;
+			}
+			&--image{
+			}
+			&--content{
+				width: 100%;
+				margin-left: 0;
+			}
+			&--title{
+				font-size: 26px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 500px){
+	.template-blog{
+		.blog_list{
+			&--header{
+				min-height: 180px;
+			}
+			&--heading{
+				font-size: 32px !important;
+			}
+		}
+		.article--title{
+			margin-bottom: 12px;
+		}
+	}
+}

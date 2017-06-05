@@ -1,0 +1,300 @@
+.remodal-wrapper {
+  z-index: 999999;
+}
+
+.remodal {
+  text-align: left;
+  padding: 0;
+  @media only screen and (min-width: 570px) {
+    max-width: 550px;
+  }
+  @include mq(500px) {
+    min-height: 100vh;
+  }
+  .remodal-close, .remodal-close:before {
+    left: auto;
+    right: 0;
+  }
+  .check {
+    display: flex;
+    &:before {
+      position: relative;
+      top: 5px;
+      display: block;
+      color: #f4d17d;
+      content: "\f00c";
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      margin-right: $size-1;
+    }
+  }
+  p {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  span {
+    vertical-align: top;
+    font-size: 1rem;
+  }
+  p, span {
+    @include mq(500px) {
+      padding: 0;
+      font-size: $size-1;
+    }
+  }
+  // span {
+  //   font-size: 1rem;
+  // }
+  .product-added {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $size-3 $size-6;
+    @include mq(500px) {
+      padding: $size-base;
+    }
+    img {
+      max-width: none !important;
+    }
+    p {
+      text-align: left;
+      padding-left: $size-5;
+      @include mq(500px) {
+        padding: 0;
+        font-size: $size-1;
+        line-height: 1.2;
+      }
+    }
+  }
+  .complete-kit {
+    position: relative;
+    background: $green;
+    color: white;
+    text-align: center;
+    padding: $size-1;
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 40px;
+      transform: translateY(100%);
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid $green;
+    }
+    p {
+      font-weight: 700;
+    }
+  }
+  .kit-includes {
+    padding: $size-6;
+    @include mq(500px) {
+      padding: $size-base;
+    }
+    .includes-wrap {
+      display: flex;
+      margin: $size-4 0;
+      @include mq(500px) {
+        text-align: left;
+        display: block;
+        margin: $size-base;
+      }
+      ul {
+        display: flex;
+        margin-bottom: $size-base;
+        @include mq(500px) {
+          margin-bottom: 0;
+        }
+        &.sum {
+          border-top: 1px solid #2b2e38;
+          padding-top: 1rem;
+          @include mq(500px) {
+            padding-top: 0;
+          }
+          p {
+            s {
+              line-height: 26px;
+            }
+          }
+        }
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        li.firstItem {
+          width: 60%;
+          flex-basis: 60%;
+        }
+        li.lastItem {
+          text-align: center;
+          width: 40%;
+          flex-basis: 40%;
+        }
+      }
+    }
+    .kit-info {
+      width: 66.66%;
+      flex-basis: 66.66%;
+      @include mq(500px) {
+        width: 100%;
+        margin-bottom: 0;
+      }
+    }
+    .kit-image {
+      text-align: center;
+      width: 33.33%;
+      flex-basis: 33.33%;
+      @include mq(500px) {
+        width: 100%;
+        display: none;
+      }
+    }
+    .kit-image-mobile {
+      display: none;
+      @include mq(500px) {
+        display: flex;
+      }
+      > div {
+        position: relative;
+        width: 33.33%;
+        flex-basis: 33.33%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:before {
+          content: '+';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(50%, -50%);
+          z-index: 1;
+        }
+        &:last-of-type {
+          &:before {
+            display: none;
+          }
+        }
+        img {
+          max-width: 80%;
+        }
+      }
+    }
+  }
+  .kit-cta {
+    padding: $size-major;
+    border: 3px solid #f5f5f5;
+    @include mq(500px) {
+      padding: 0;
+      border: none;
+    }
+    > span {
+      @include mq(500px) {
+        //display: none;
+      }
+    }
+    .button-wrap {
+      display: flex;
+      justify-content: space-between;
+      margin-top: $size-major;
+      @include mq(500px) {
+        margin-top: $size-minor;
+      }
+      .kit-btn {
+        width: 66.66%;
+        flex-basis: 66.66%;
+        @include mq(500px) {
+          margin-top: $size-major;
+          width: 55%;
+          flex-basis: 55%;
+        }
+        > div {
+          @include mq(500px) {
+            line-height: 0;
+          }
+        }
+        span {
+          @include mq(500px) {
+            display: none;
+          }
+        }
+      }
+      .single-product-btn {
+        height: auto;
+        margin: 0;
+        border: 1px solid #e1bb60;
+        border-radius: 2px;
+        padding-top: 0;
+        padding: $size-base;
+        justify-content: center;
+        &:before {
+          color: #2b382b;
+          font-size: $size-5;
+          margin-right: 1.5rem;
+          @include mq(500px) {
+            display: none;
+          }
+        }
+        h4 {
+          font-size: $size-major !important;
+          color: #2b382b;
+          font-weight: 700;
+          @include mq(500px) {
+            font-size: .8rem !important;
+          }
+        }
+        span {
+          font-size: $size-minor;
+        }
+      }
+      .you-save {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: left;
+        @include mq(500px) {
+          text-align: center;
+          padding-left: $size-2;
+        }
+        h4 {
+          color: $green;
+          font-weight: 700;
+          font-size: $size-4 !important;
+          margin-bottom: $size-minor;
+          @include mq(500px) {
+            font-size: 1.2rem !important;
+          }
+        }
+        .savings {
+          text-align: center;
+          border-radius: 2px;
+          text-transform: uppercase;
+          background: $green;
+          color: white;
+          font-size: $size-minor;
+          font-weight: 600;
+          padding: 4px;
+        }
+      }
+    }
+  }
+  a.checkout {
+    display: block;
+    margin: $size-6 auto 0;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #29478b;
+    &:hover {
+      cursor: pointer;
+    }
+    @include mq(500px) {
+      margin-top: $size-base;
+      font-size: $size-2;
+    }
+  }
+}

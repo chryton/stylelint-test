@@ -1,0 +1,32 @@
+//----------------------------------------------------------------------
+
+// Media Query Mixin
+//
+// Values: value[unit] | $variable | keyword
+// Keywords: mobile | tablet | desktop
+
+@mixin mq($value) {
+  @if(type-of($value) == number) {
+    @media only screen and (max-width: $value) { @content; }
+  }
+  @else if(type-of($value) == string) {
+    @if $value == "mobile" {
+     @media only screen and (max-width: $mobile) { @content; }
+    }
+    @else if $value == "mobile-large" {
+     @media only screen and (max-width: $mobile-large) { @content; }
+    }
+    @else if $value == "tablet" {
+     @media only screen and (max-width: $tablet) { @content; }
+    }
+    @else if $value == "tablet-large" {
+     @media only screen and (max-width: $tablet-large) { @content; }
+    }
+    @else if $value == "desktop" {
+     @media only screen and (max-width: $desktop) { @content; }
+    }
+    @else if $value == "desktop-large" {
+     @media only screen and (max-width: $desktop-large) { @content; }
+    }
+  }
+}

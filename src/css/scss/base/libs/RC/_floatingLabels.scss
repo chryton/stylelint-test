@@ -1,0 +1,125 @@
+////////////////////////////////
+// RocketCode Floating Labels //
+////////////////////////////////
+
+/******************************
+Assumes markup is like this:
+
+	<span class="floating-label">
+		<input type="email" id="input_name" name="input_name" required autocomplete="email">
+		<label for="input_name">Email</label>
+	</span> 
+
+Currently only supports moving text up
+
+@TODO: make position variable (top, left, right, bottom)
+@TODO: enable placeholder fallback
+@TODO: make font sizes variable
+*******************************/
+
+$floating_label--border_color: #d9d9d9;
+$floating_label--text_color: #999;
+$floating_label--error_color: #fb0c00;
+
+
+.floating-label{
+	display: block;
+	position: relative;
+	margin-bottom: 15px;
+	&.split{
+		&--two{
+			width: calc(50% - 4px);
+			float: left;
+			clear: none;
+			margin-right: 8px;
+			+ .split--two{
+				margin-right: 0;
+			}
+			@media screen and (max-width: 600px){
+				width: 100%;
+				margin-right: 0;
+			}
+		}
+		&--three{
+			width: calc(33% - 4px);
+			float: left;
+			clear: none;
+			margin-right: 8px;
+			+ .split--three + .split--three{
+				margin-right: 0;
+			}
+			@media screen and (max-width: 600px){
+				width: 100%;
+				margin-right: 0;
+			}
+		}
+	}
+	label{
+		color: $floating_label--text_color;
+		position: absolute;
+		top: 28%;
+		left: 16px;
+		opacity: 1;
+		@include rempx(font-size, 16px);
+		transition: font-size 0.34s ease;
+		transition-property: font-size, top, opacity;
+		cursor: text;
+		transform: translate3d(0,0,0);
+		width: 90%;
+	}
+	input,
+	select{
+		width: 100%;
+		border: none;
+		border: 2px solid $floating_label--border_color;
+		border-radius: 5px;
+		@include rempx(padding, 25px 16px 5px);
+		@include rempx(font-size, 15px);
+		margin-bottom: 5px;
+		transition: border 0.34s ease;
+		transform: translate3d(0,0,0);
+		&:focus{
+			border-color: darken($floating_label--border_color, 60%);
+		}
+		&::-ms-expand {
+			display: none;
+		}
+	}
+	input{
+		&:focus + label,
+		&[required]:valid + label,
+		&.filled + label{
+			@include rempx(font-size, 12px);
+			top: 10px;
+		}
+	}
+	select{
+		height: 52px;
+		+ label{
+			cursor: auto;
+		}
+		&:focus + label,
+		&[required]:valid + label,
+		&.filled + label{
+			@include rempx(font-size, 12px);
+			top: 10px;
+			opacity: 0;
+		}
+	}
+	.error-text{
+		color: $floating_label--error_color;
+		@include rempx(font-size, 12px);
+		display: none;
+	}
+	&.error{
+		label{
+			color: $floating_label--error_color;
+		}
+		input{
+			border-color: $floating_label--error_color;
+		}
+		.error-text{
+			display: block;
+		}
+	}
+}

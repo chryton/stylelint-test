@@ -1,0 +1,49 @@
+/*
+ *  $helvetica-neue-bold    --  Links, Call-to-actions
+ *  $helvetica-neue-medium  --  Body, Labels
+ *  $helvetica-neue-light   --  Titles
+ *
+ *  $size-6:       2.500rem;  //   40.000px
+ *  $size-5:       1.767rem;  //   28.267px
+ *  $size-4:       1.545rem;  //   24.722px
+ *  $size-major:   1.250rem;  //   20.000px
+ *  $size-3:       1.092rem;  //   17.470px
+ *  $size-base:    1.000rem;  //   16.000px
+ *  $size-2:       0.875rem;  //   14.000px
+ *  $size-minor:   0.750rem;  //   12.000px
+ *  $size-1:       0.675rem;  //   10.797px
+ *  $size-min:     0.590rem;  //    9.443px
+ *
+ */
+
+@font-face {
+  font-family: 'HelveticaNeueLTStd-Bd';
+  src: url("{{ 'font-HelveticaNeueLTStd-Bd.eot' | asset_url }}");
+  src: local('☺'), url("{{ 'font-HelveticaNeueLTStd-Bd.woff' | asset_url }}") format('woff'), url("{{ 'font-HelveticaNeueLTStd-Bd.ttf' | asset_url }}") format('truetype'), url("{{ 'font-HelveticaNeueLTStd-Bd.svg' | asset_url }}") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLTStd-Md';
+  src: url("{{ 'font-HelveticaNeueLTStd-Md.eot' | asset_url }}");
+  src: local('☺'), url("{{ 'font-HelveticaNeueLTStd-Md.woff' | asset_url }}") format('woff'), url("{{ 'font-HelveticaNeueLTStd-Md.ttf' | asset_url }}") format('truetype'), url("{{ 'font-HelveticaNeueLTStd-Md.svg' | asset_url }}") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLTStd-Lt';
+  src: url("{{ 'font-HelveticaNeueLTStd-Lt.eot' | asset_url }}");
+  src: local('☺'), url("{{ 'font-HelveticaNeueLTStd-Lt.woff' | asset_url }}") format('woff'), url("{{ 'font-HelveticaNeueLTStd-Lt.ttf' | asset_url }}") format('truetype'), url("{{ 'font-HelveticaNeueLTStd-Lt.svg' | asset_url }}") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "slick";
+  src: url("{{ 'slick.eot' | asset_url }}");
+  src: url("{{ 'slick.eot?#iefix' | asset_url }}") format("embedded-opentype"), url("{{ 'slick.woff' | asset_url }}") format("woff"), url("{{ 'slick.ttf' | asset_url }}") format("truetype"), url("{{ 'slick.svg#slick' | asset_url }}") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}

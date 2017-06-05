@@ -1,0 +1,42 @@
+$blue: #369;
+$white: #fff;
+$dark-gray: #373737;
+$medium-gray: #888;  // best guess
+$green: #3a833a;
+
+$color: (
+	'blue': (
+		'base': #1e418f,
+		'light': #2f7fd0,
+		'xlight': #00b4e6
+	),
+	'red': (
+		'base': #e74c3c,
+		'secondary': #cf1f00,
+		'tertiary': #d11739
+	),
+	'gray': (
+		'base': #888,
+		'sold_out': #c2c0bc,
+		'dark': #333
+	),
+	'orange': (
+		'base': #ff8b15
+	),
+	'brand': (
+		'primary': #30b6d1, // legacy: #1e418f
+		'secondary': #fff,
+		'tertiary': #5bc0eb,
+		'quaternary': #01b193,  // greenish
+		'seafoam': #00B4AA, // formerly #41cfbd
+		'dark': #284b55,
+		'salmon': #f2635b
+	)
+);
+
+@function color($color-name, $tone: base) {
+	@return map-get(map-get($color, $color-name), $tone);
+}
+// color('blue', 'light') is how to get colors loaded
+
+//#284b55   #717f86
